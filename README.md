@@ -1,6 +1,6 @@
-TalentScout Hiring Assistant Chatbot
+**TalentScout Hiring Assistant Chatbot**
 
-Project Overview
+**Project Overview**
 The TalentScout Hiring Assistant is an AI-powered chatbot designed to streamline the initial screening process for recruitment agencies. This chatbot engages with candidates in natural conversation to:
 
 -	Collect essential candidate information (contact details, experience, etc.)
@@ -10,7 +10,7 @@ The TalentScout Hiring Assistant is an AI-powered chatbot designed to streamline
 
 I built this to demonstrate how AI can handle the repetitive early stages of technical screening, freeing up human recruiters for more complex evaluations. The chatbot maintains context throughout the conversation and gracefully handles unexpected inputs.
 
-Installation Instructions
+**Installation Instructions**
 
 Getting this running locally is straightforward:
 
@@ -34,7 +34,7 @@ Getting this running locally is straightforward:
 The app will automatically open in your default browser at `http://localhost:8501/`
 AWS live demo Link :- http://13.233.126.150:8501/  ## You can directly run this anywhere. ## Ignore model loading Warning 
 
-Usage Guide
+**Usage Guide**
 Using the chatbot couldn't be simpler:
 1. Start chatting - The bot will initiate the conversation automatically
 2. Follow the prompts - Provide the requested information when asked
@@ -43,14 +43,14 @@ Using the chatbot couldn't be simpler:
 
 Pro tip: The bot understands natural language - you don't need to be overly formal in your responses.
 
-Technical Details
+**Technical Details**
  Core Technologies
 - Python 3.10+ - The backbone of the application
 - Streamlit- For the clean, interactive web interface
 - HuggingFace Transformers - Provides the DialoGPT-small language model
 - Regex - For input validation (emails, phone numbers)
 
-Architectural Decisions
+**Architectural Decisions**
 
 I opted for a modular conversation flow design where:
 -	Each "step" in the screening process has a dedicated handler
@@ -61,7 +61,7 @@ The DialoGPT-small model was chosen because:
 -	Provides decent conversational abilities
 -	Doesn't require expensive API calls
 
- Prompt Design Strategy
+**Prompt Design Strategy**
 The conversation follows a carefully designed flow:
 1. Information Gathering
    Uses direct but friendly prompts to collect candidate data  
@@ -75,7 +75,7 @@ The conversation follows a carefully designed flow:
 4. Context Maintenance
    The bot remembers previous answers and uses them naturally in follow-ups
 
-Challenges & Solutions
+**Challenges & Solutions**
 
 Challenge 1: Model Limitations
 The smaller DialoGPT model sometimes generates odd responses compared to larger models like GPT-3.
@@ -96,7 +96,7 @@ Challenge 4: State Management
 Keeping track of where candidates are in the screening process.
 Solution:
 Implemented a step-based system using Streamlit's session state features.
-
-Final Thoughts
+**
+Final Thoughts**
 
 This project was a great exercise in balancing AI capabilities with practical constraints. While there's always room for improvement (I'd love to add multilingual support next!), the current version provides a solid foundation for automated technical screening that actually feels human.
